@@ -1,0 +1,20 @@
+fastapi
+uvicorn[standard]
+python-jose[cryptography]
+passlib[bcrypt]
+pymongo
+python-dotenv
+
+# File parsing
+pdfplumber
+python-docx
+python-pptx
+
+# Async file handling
+aiofiles
+
+# CORS middleware for frontend
+fastapi[all]
+
+# Optional: For validation and nice errors
+pydantic
