@@ -11,7 +11,7 @@ app = FastAPI()
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "https://classmateai-tz.netlify.app/"],  # Add your frontend URL
+    allow_origins=["http://localhost:5173", "https://classmateai-tz.netlify.app"],  # Add your frontend URL
     allow_credentials=True,
     allow_methods=["*"],  # Allow all methods (GET, POST, PUT, DELETE, etc.)
     allow_headers=["*"],  # Allow all headers
