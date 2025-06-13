@@ -7,7 +7,7 @@ interface Flashcard {
   question: string;
   answer: string;
 }
-
+const APP_URL = import.meta.env.VITE_APP_URL || "http://localhost:8000";
 const GenerateFlashcards: React.FC = () => {
   const [file, setFile] = useState<File | null>(null);
   const [flashcards, setFlashcards] = useState<Flashcard[]>([]);
@@ -27,7 +27,7 @@ const GenerateFlashcards: React.FC = () => {
     formData.append("file", file);
 
     try {
-      const response = await axios.post("http://localhost:8000/flashcards/generate-flashcards", formData);
+      const response = await axios.post(`${APP_URL}/flashcards/generate-flashcards`, formData);
       setFlashcards(response.data.flashcards);
       setCurrentIndex(0);
     } catch (error) {

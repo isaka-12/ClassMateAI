@@ -5,6 +5,9 @@ passlib[bcrypt]
 pymongo
 python-dotenv
 
+# AI Service
+cohere
+
 # File parsing
 pdfplumber
 python-docx
@@ -18,3 +21,4 @@ fastapi[all]
 
 # Optional: For validation and nice errors
 pydantic
+
