@@ -55,9 +55,9 @@ const GenerateFlashcards: React.FC = () => {
     <>
       {loading && <FlashcardLoader />}
       
-      <div className="bg-[#0D1B2A] text-[#E0E1DD] p-4 min-h-screen">
+      <div className="bg-[#0D1B2A] text-[#E0E1DD] p-4  min-h-screen">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-8">
+          <div className="mb-8 text-center">
             <h2 className="text-4xl font-bold mb-4 text-[#FF6B00]">
               🧠 Try Mode - Flashcards
             </h2>
@@ -83,7 +83,7 @@ const GenerateFlashcards: React.FC = () => {
               >
                 {loading ? (
                   <span className="flex items-center justify-center">
-                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 mr-3 -ml-1 text-white animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
@@ -97,12 +97,12 @@ const GenerateFlashcards: React.FC = () => {
           </div>
 
           {/* Flashcard Display */}
-          {flashcards.length > 0 && (
+         {flashcards.length > 0 && (
             <div className="space-y-6">
-              {/* Dynamic container that adapts to content height */}
-              <div className="w-full transition-all duration-300 ease-in-out">
+              {/* Dynamic container with responsive height */}
+              <div className="w-full h-[70vh] min-h-[400px] max-h-[800px] transition-all duration-300 ease-in-out">
                 <FlashcardItem
-                  key={`flashcard-${currentIndex}`} // Force re-render on card change
+                  key={`flashcard-${currentIndex}`}
                   ref={flashcardRef}
                   question={flashcards[currentIndex].question}
                   answer={flashcards[currentIndex].answer}
