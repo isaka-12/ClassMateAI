@@ -6,7 +6,7 @@ import FeaturesSection from '../components/FeaturesSection';
 
 const HomePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen text-white bg-primary">
       <Navbar />
       <main>
         <HeroSection />
@@ -14,7 +14,7 @@ const HomePage: React.FC = () => {
        
       </main>
       <footer>
-        <div className="py-6 text-center text-gray-600">
+        <div className="py-6 text-center text-white">
           &copy; {new Date().getFullYear()} ClassMateAI. All rights reserved.
         </div>
       </footer>

@@ -10,6 +10,18 @@ module.exports = {
         perspective: { '1000': '1000px' },
         transformStyle: { 'preserve-3d': 'preserve-3d' },
       },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
+      },
+      colors: {
+        'white': '#ffffff',
+        'gray':'#FFFDFD',
+        'primary': '#102430',
+        'secondary': '#FF6B00',
+        'secondary-deep':'rgba(3, 2, 26, 1)'
+
+      },
     },
     plugins: [],
   }
