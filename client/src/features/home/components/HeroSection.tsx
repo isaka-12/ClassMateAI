@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from '../../../components/ui/Button';
 import { Link } from 'react-router-dom';
 
 const HeroSection: React.FC = () => {
