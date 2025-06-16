@@ -4,18 +4,18 @@ import { Link } from 'react-router-dom';
 const HeroSection: React.FC = () => {
   return (
     <section id="home" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 ">
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div className="flex flex-col items-center justify-center max-w-6xl px-4 mx-auto sm:px-6 lg:px-8">
         <div className="text-center">
-          <h1 className="mb-6 text-[48px] font-bold text-gray-900 md:text-6xl animate-fade-in-up">
+          <h1 className="mb-8 text-[32px] md:text-[48px] font-bold text-gray-900  animate-fade-in-up lg:text-[48px] max-w-3xl">
             Study Smarter, Not Harder with <span className="text-secondary animate-pulse">ClassMate</span>AI
           </h1>
-          <p className="max-w-3xl mx-auto mb-8 text-xl text-gray animate-fade-in-up animation-delay-200">
+          <p className="max-w-2xl mx-auto mb-12 text-[24px] text-gray animate-fade-in-up animation-delay-200">
             ClassmateAI helps you turn your class notes into flashcards, quizzes, and summaries—all powered by AI. Making studying smart and enjoyable.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row animate-fade-in-up animation-delay-400">
             <Link 
               to="/flashcards" 
-              className="text-white transition-all duration-300 rounded-full shadow-lg bg-secondary hover:bg-secondary-dark hover:shadow-xl hover:scale-105 transform w-[240px] h-[50px] flex items-center justify-center group"
+              className="text-white transition-all duration-300 rounded-full shadow-lg bg-secondary hover:bg-secondary-dark hover:shadow-xl hover:scale-105 transform w-[240px] h-[50px] flex items-center justify-center group text-[24px] hover:font-semibold"
             >
               <span className="mr-2">Try it Now</span>
               <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -24,7 +24,7 @@ const HeroSection: React.FC = () => {
             </Link>
             <Link 
               to="/signup" 
-              className="text-gray-800 transition-all duration-300 border-2 rounded-full shadow-lg border-secondary w-[240px] h-[50px] flex items-center justify-center hover:bg-secondary hover:text-white hover:shadow-xl hover:scale-105 transform group"
+              className="text-white transition-all duration-300 border-2 rounded-full shadow-lg border-secondary w-[240px] h-[50px] flex items-center justify-center hover:bg-secondary hover:text-white hover:shadow-xl hover:scale-105 transform group text-[24px] hover:font-semibold"
             >
               <span className="mr-2">Get Started</span>
               <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">

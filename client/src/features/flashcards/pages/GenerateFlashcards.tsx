@@ -55,13 +55,13 @@ const GenerateFlashcards: React.FC = () => {
     <>
       {loading && <FlashcardLoader />}
       
-      <div className="bg-[#0D1B2A] text-[#E0E1DD] p-4  min-h-screen">
+      <div className="min-h-screen p-4 text-white bg-primary">
         <div className="max-w-4xl mx-auto">
           <div className="mb-8 text-center">
-            <h2 className="text-4xl font-bold mb-4 text-[#FF6B00]">
+            <h2 className="mb-4 text-4xl font-bold text-secondary">
               🧠 Try Mode - Flashcards
             </h2>
-            <p className="text-[#778DA9] text-lg">
+            <p className="text-lg text-gray">
               Upload your study material and let ClassMate AI create interactive flashcards
             </p>
           </div>

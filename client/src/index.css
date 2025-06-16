@@ -7,7 +7,12 @@
 body {
   font-family:'Poppins', sans-serif;
 }
-
+:root {
+  --primary: #102430; /* Tailwind's blue-500 */
+  --secondary: #FF6B00; /* Tailwind's orange-500 */
+  
+  
+}
 /* ...existing code... */
 
 /* 3D Transform Utilities */

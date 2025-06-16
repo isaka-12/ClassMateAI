@@ -71,7 +71,7 @@ export const FlashcardItem = forwardRef<FlashcardItemRef, FlashcardItemProps>(
 
           {/* Back Side - Answer */}
           <div 
-            className="absolute inset-0 w-full h-full backface-hidden bg-gradient-to-br from-[#FF6B00]/90 to-[#FF8500]/90 border-2 border-[#E0E1DD] rounded-xl shadow-2xl backdrop-blur-md flex flex-col justify-between p-6 hover:border-white transition-colors duration-300 group"
+            className="absolute inset-0 w-full h-full backface-hidden bg-gradient-to-br from-secondary-light/90 to-secondary-light border-2 border-[#E0E1DD] rounded-xl shadow-2xl backdrop-blur-md flex flex-col justify-between p-6 hover:border-white transition-colors duration-300 group"
             style={{
               transform: 'rotateY(180deg)',
               backfaceVisibility: 'hidden',
