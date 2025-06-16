@@ -9,7 +9,7 @@ const HeroSection: React.FC = () => {
           <h1 className="mb-8 text-[32px] md:text-[48px] font-bold text-gray-900  animate-fade-in-up lg:text-[48px] max-w-3xl">
             Study Smarter, Not Harder with <span className="text-secondary animate-pulse">ClassMate</span>AI
           </h1>
-          <p className="max-w-2xl mx-auto mb-12 text-[24px] text-gray animate-fade-in-up animation-delay-200">
+          <p className="max-w-2xl mx-auto mb-12 text-[16px] md:text-[24px] text-gray animate-fade-in-up animation-delay-200">
             ClassmateAI helps you turn your class notes into flashcards, quizzes, and summaries—all powered by AI. Making studying smart and enjoyable.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row animate-fade-in-up animation-delay-400">
