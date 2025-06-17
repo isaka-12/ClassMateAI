@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const HeroSection: React.FC = () => {
   return (
-    <section id="home" className="py-28 bg-gradient-to-br from-blue-50 to-indigo-100 h-screen">
+    <section id="home" className="py-16 md:py-28 bg-gradient-to-br from-blue-50 to-indigo-100 h-screen">
       <div className="flex flex-col items-center justify-center  px-4 mx-auto sm:px-6 lg:px-8 ">
         <div className="text-center">
           <h1 className="mb-16 text-[32px]  md:text-[48px] font-bold text-gray-900  animate-fade-in-up lg:text-[48px] max-w-4xl">
