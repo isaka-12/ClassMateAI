@@ -45,7 +45,7 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="flex items-center justify-start text-gray-300">
                   <LocationOnOutlined className="mr-2 text-secondary" sx={{ fontSize: 20 }} />
-                  <span>San Francisco, CA</span>
+                  <span>Dar es salaam, TZ</span>
                 </div>
               </div>
             </div>

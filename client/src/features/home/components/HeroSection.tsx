@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 
 const HeroSection: React.FC = () => {
   return (
-    <section id="home" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 ">
-      <div className="flex flex-col items-center justify-center max-w-6xl px-4 mx-auto sm:px-6 lg:px-8">
+    <section id="home" className="py-28 bg-gradient-to-br from-blue-50 to-indigo-100 h-screen">
+      <div className="flex flex-col items-center justify-center  px-4 mx-auto sm:px-6 lg:px-8 ">
         <div className="text-center">
-          <h1 className="mb-8 text-[32px] md:text-[48px] font-bold text-gray-900  animate-fade-in-up lg:text-[48px] max-w-3xl">
+          <h1 className="mb-16 text-[32px]  md:text-[48px] font-bold text-gray-900  animate-fade-in-up lg:text-[48px] max-w-4xl">
             Study Smarter, Not Harder with <span className="text-secondary animate-pulse">ClassMate</span>AI
           </h1>
-          <p className="max-w-2xl mx-auto mb-12 text-[16px] md:text-[24px] text-gray animate-fade-in-up animation-delay-200">
+          <p className="max-w-3xl mx-auto mb-24 text-[20px] md:text-[24px] text-gray animate-fade-in-up animation-delay-200">
             ClassmateAI helps you turn your class notes into flashcards, quizzes, and summaries—all powered by AI. Making studying smart and enjoyable.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row animate-fade-in-up animation-delay-400">

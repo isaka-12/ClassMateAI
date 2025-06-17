@@ -11,7 +11,7 @@ const BrandSection: React.FC = () => {
             <p className='text-[20px]'>We’ve cracked the student code — turning messy class notes into smart study material instantly.</p>
             <p className='text-[20px]'>Built with real student struggles in mind, ClassMate AI is your academic sidekick — smarter, faster, and always on.</p>
         </div>
-        <div className='flex flex-col items-center justify-center rounded-xl bg-secondary'><img src={ChildrenImage} alt="Children" /></div>
+        <div className='flex flex-col  justify-center rounded-xl bg-secondary items-center'><img src={ChildrenImage} alt="Children" /></div>
     </section>
    
   );
