@@ -2,7 +2,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.routers import flashcards
+from app.routers import flashcards, explanations
 from app.auth import auth_router
 from app.routers import upload
 
@@ -18,6 +18,7 @@ app.add_middleware(
 )
 
 app.include_router(flashcards.router, prefix="/flashcards", tags=["flashcards"])
+app.include_router(explanations.router, prefix="/explanations", tags=["explanations"])
 app.include_router(auth_router.router, prefix="/auth", tags=["Auth"])
 app.include_router(upload.router, prefix="/upload", tags=["Upload"])
 

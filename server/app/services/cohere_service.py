@@ -178,3 +178,138 @@ def create_fallback_flashcards(text: str, target_count: int = 3) -> list:
     return flashcards if flashcards else [
         {"question": "What is the main topic of this content?", "answer": "Please review the uploaded content for key concepts and details."}
     ]
+
+
+# ...existing code...
+
+def get_additional_explanation(question: str, current_answer: str, context: str = "") -> dict:
+    """Get additional explanation for a flashcard from Cohere"""
+    
+    prompt = f"""
+You are an expert tutor helping a student understand a concept better. A student is reviewing a flashcard and needs more detailed explanation.
+
+Original Question: {question}
+Current Answer: {current_answer}
+Additional Context: {context if context else "No additional context provided"}
+
+Please provide:
+1. A more detailed explanation of the concept
+2. Real-world examples or analogies to help understand
+3. Key points to remember
+4. Related concepts they should know
+
+Format your response as a clear, educational explanation that builds upon the original answer. Be encouraging and thorough but not overwhelming.
+"""
+
+    try:
+        response = co.chat(
+            message=prompt,
+            model="command-r-plus",
+            temperature=0.3,  # Lower temperature for more consistent explanations
+            chat_history=[],
+        )
+        
+        return {
+            "success": True,
+            "explanation": response.text.strip(),
+            "original_question": question,
+            "original_answer": current_answer
+        }
+        
+    except Exception as e:
+        print(f"Error getting additional explanation: {e}")
+        return {
+            "success": False,
+            "error": str(e),
+            "explanation": "Sorry, I couldn't generate additional explanation at this time. Please try again later.",
+            "original_question": question,
+            "original_answer": current_answer
+        }
+
+def get_simplified_explanation(question: str, current_answer: str) -> dict:
+    """Get a simplified explanation for complex concepts"""
+    
+    prompt = f"""
+You are helping a student who finds the current explanation too complex. Please provide a simpler, more basic explanation.
+
+Question: {question}
+Current Answer: {current_answer}
+
+Please provide:
+1. A simplified explanation using basic terms
+2. Break down complex concepts into smaller parts
+3. Use simple analogies or examples
+4. Focus on the most important points
+
+Keep your explanation clear, concise, and easy to understand.
+"""
+
+    try:
+        response = co.chat(
+            message=prompt,
+            model="command-r-plus",
+            temperature=0.3,
+            chat_history=[],
+        )
+        
+        return {
+            "success": True,
+            "explanation": response.text.strip(),
+            "type": "simplified",
+            "original_question": question,
+            "original_answer": current_answer
+        }
+        
+    except Exception as e:
+        print(f"Error getting simplified explanation: {e}")
+        return {
+            "success": False,
+            "error": str(e),
+            "explanation": "Sorry, I couldn't generate a simplified explanation at this time.",
+            "original_question": question,
+            "original_answer": current_answer
+        }
+
+def get_examples_and_applications(question: str, current_answer: str) -> dict:
+    """Get practical examples and real-world applications"""
+    
+    prompt = f"""
+You are helping a student understand how a concept applies in real life. Provide practical examples and applications.
+
+Question: {question}
+Current Answer: {current_answer}
+
+Please provide:
+1. 2-3 real-world examples of this concept
+2. Practical applications or use cases
+3. How this concept connects to everyday life
+4. Why this concept is important to understand
+
+Focus on making the concept relevant and relatable.
+"""
+
+    try:
+        response = co.chat(
+            message=prompt,
+            model="command-r-plus",
+            temperature=0.4,  # Slightly higher for creative examples
+            chat_history=[],
+        )
+        
+        return {
+            "success": True,
+            "explanation": response.text.strip(),
+            "type": "examples",
+            "original_question": question,
+            "original_answer": current_answer
+        }
+        
+    except Exception as e:
+        print(f"Error getting examples: {e}")
+        return {
+            "success": False,
+            "error": str(e),
+            "explanation": "Sorry, I couldn't generate examples at this time.",
+            "original_question": question,
+            "original_answer": current_answer
+        }
