@@ -185,7 +185,7 @@ export const FlashcardItem = forwardRef<FlashcardItemRef, FlashcardItemProps>(
         {/* Explanation Modal */}
         {showExplanationModal && (
           <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
-            <div className="bg-white rounded-xl shadow-2xl max-w-2xl w-full max-h-[80vh] overflow-hidden">
+            <div className="bg-primary rounded-xl shadow-2xl max-w-2xl w-full max-h-[80vh] overflow-hidden">
               <div className="bg-[#FF6B00] text-white p-4 flex justify-between items-center">
                 <h3 className="text-xl font-semibold">
                   {explanationData?.type === 'simplified' ? '🔍 Simplified Explanation' :
