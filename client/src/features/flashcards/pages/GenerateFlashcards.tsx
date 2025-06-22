@@ -7,7 +7,7 @@ interface Flashcard {
   question: string;
   answer: string;
 }
-const APP_URL = import.meta.env.VITE_API_URL ;
+const APP_URL = "http://localhost:8000"; ;
 const GenerateFlashcards: React.FC = () => {
   const [file, setFile] = useState<File | null>(null);
   const [flashcards, setFlashcards] = useState<Flashcard[]>([]);

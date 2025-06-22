@@ -7,6 +7,8 @@ python-dotenv
 
 # AI Service
 cohere
+genai
+google-generativeai
 
 # File parsing
 pdfplumber
@@ -21,4 +23,5 @@ fastapi[all]
 
 # Optional: For validation and nice errors
 pydantic
+
 

@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from app.services.cohere_service import (
+from app.services.gemini_service import (
     get_additional_explanation,
     get_simplified_explanation,
     get_examples_and_applications
