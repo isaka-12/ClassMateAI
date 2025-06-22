@@ -282,13 +282,7 @@ export const FlashcardItem = forwardRef<FlashcardItemRef, FlashcardItemProps>(
                       <div className="prose-sm prose text-gray-700 max-w-none">
                         <ReactMarkdown
                           components={{
-                            code({ node, inline, className, children, ...props }: {
-                              node?: any;
-                              inline?: boolean;
-                              className?: string;
-                              children?: React.ReactNode;
-                              [key: string]: any;
-                            }) {
+                            code({ node, inline, className, children, ...props }: { node?: any; inline?: boolean; className?: string; children?: React.ReactNode; [key: string]: any }) {
                               const match = /language-(\w+)/.exec(className || '');
                               return !inline && match ? (
                                 <SyntaxHighlighter
