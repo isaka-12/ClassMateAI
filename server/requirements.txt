@@ -4,24 +4,12 @@ python-jose[cryptography]
 passlib[bcrypt]
 pymongo
 python-dotenv
-
-# AI Service
 cohere
-genai
 google-generativeai
-
-# File parsing
 pdfplumber
 python-docx
 python-pptx
-
-# Async file handling
 aiofiles
-
-# CORS middleware for frontend
 fastapi[all]
-
-# Optional: For validation and nice errors
 pydantic
-
-
+python-multipart
